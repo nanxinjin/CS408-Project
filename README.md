@@ -12,7 +12,7 @@ https://nodejs.org/en/
 npm install
 ```
 
-2.run in command to start server
+2.run in command line to start server
 ```
 node server.js
 ```
