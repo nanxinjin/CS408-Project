@@ -53,11 +53,11 @@ form input:focus
 
 form button
 {
-  background-color: white;
+  background-color: silver;
   outline: 0;
   border: 0;
   padding: 10px 15px;
-  color: #53e3a6;
+  color: blue;
   border-radius: 3px;
   width: 250px;
   cursor: pointer;
@@ -66,20 +66,5 @@ form button
 
 form button:hover
 {
-  background-color:#ff006e;
+  background-color:pink;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
