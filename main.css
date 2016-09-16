@@ -46,7 +46,7 @@ header p {
   color: #fff;
 }
 
-.jumbotron h3 {
+.jumbotron h4 {
   margin: 0 0 20px;
   color: #fff;
 }
@@ -75,8 +75,8 @@ section .row img {
 
 .btn.btn-secondary {
   position:fixed;
-  top:0;
-  right:0px;
+  top:3px;
+  right:5px;
   width: 100px;
   background-color: rgba(216, 44, 94, 1);;
   color: #ffffff;
