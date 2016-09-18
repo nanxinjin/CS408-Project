@@ -32,7 +32,7 @@ header p {
 .jumbotron {
   display: flex;
   align-items: center;
-  background-image: url("login_WallPaper.jpg");
+  background-image: url("../image/login_WallPaper.jpg");
   background-size: cover;
   color: #ffffff;
   height: 500px;
