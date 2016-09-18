@@ -8,6 +8,10 @@ $form.on('submit', function(event) {
 
     console.log('clicked email: ' + $email.val() + ' password: ' + $password.val());
 
+//existing account:
+// email: 111@tao.com
+// password: tao
+
     $.ajax({
         url: "https://cs408.herokuapp.com/api/login",
         data: {
@@ -15,7 +19,7 @@ $form.on('submit', function(event) {
             password: $password.val()
         },
         type: "POST",
-        dataType : "json",
+        dataType : "json"
     })// Code to run if the request succeeds (is done);
       // The response is passed to the function
       .done(function( json ) {
