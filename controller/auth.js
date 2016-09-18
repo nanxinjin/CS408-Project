@@ -24,6 +24,7 @@ module.exports = {
     },
     loginWithEmail: function(req, res) {
         var body = _.pick(req.body, 'email', 'password');
+        console.log('log in email and pwd' + JSON.stringify(body));
         User.getAuthenticated(body).then(function(user) {
             console.log('login get user : ' + user);
             var token = user.generateToken();
