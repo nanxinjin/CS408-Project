@@ -50,9 +50,9 @@ module.exports = {
         })
     },
     getAllUsers: function(req, res) {
-        User.find().exec(function (err, course) {
+        User.find().exec(function (err, users) {
             if (err) return res.status(400).send();
-            res.send(course);
+            res.send(users);
         });
     },
     deleleAllUser: function(req, res) {

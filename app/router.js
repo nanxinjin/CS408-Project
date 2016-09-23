@@ -9,4 +9,6 @@ module.exports = function(app) {
     app.delete('/api/deletealluser', auth.deleleAllUser);
     app.post('/api/logout', auth.logout);
 
+
+    app.post('/api/market',market.postMarket);
 };
