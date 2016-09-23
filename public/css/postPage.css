@@ -1,0 +1,60 @@
+body {
+font-family: 'Roboto', sans-serif;
+font-weight: 300;
+}
+header {
+padding: 20px 0;
+}
+header .row,
+footer .row {
+display: flex;
+align-items: center;
+}
+header h1 {
+font-weight: 700;
+margin: 0;
+}
+header nav {
+display: flex;
+justify-content: flex-end;
+}
+header p {
+padding: 0 20px;
+margin: 0;
+}
+.btn.btn-secondary {
+position:fixed;
+top:7px;
+right:20px;
+width: 100px;
+background-color: rgba(216, 44, 94, 1);
+color: #ffffff;
+margin: 0 0 30px;
+}
+.btn.btn-secondary:hover {
+color: #ffffff;
+background-color:  rgba(110, 166, 56, 1);
+}
+.w3-navbar{
+width: 100%;
+}
+.jumbotron {
+display: flex;
+align-items: center;
+background-image: url("../image/login_WallPaper.jpg");
+background-size: cover;
+color: #ffffff;
+height: 200px;
+text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+.cover h2{
+font-size: 60px;
+font-weight: 700;
+margin: 0;
+color: #fff;
+}
+.cover h4{
+
+margin: 0 0 20px;
+color: #fff;
+}
