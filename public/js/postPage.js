@@ -15,3 +15,8 @@ function w3_close() {
 document.getElementById("mySidenav").style.display = "none";
 document.getElementById("myOverlay").style.display = "none";
 }
+
+/////////////This is enlarger
+// Get the modal
+
+/////////////This is enlarger

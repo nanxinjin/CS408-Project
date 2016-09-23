@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset = "utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS408 HOMEPAGE</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
@@ -48,7 +49,6 @@
       </form>
     </div>
     <!--Login page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
     <!--Full Screen Information-->
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -61,10 +61,6 @@
         <h3>Yaoxi Liang: Front-End</h3>
       </div>
     </div>
-
-
-
-
     <section class="jumbotron">
       <div class="container">
         <div class="row text-center">
@@ -74,31 +70,26 @@
         </div>
       </div>
     </section>
-    <section class="container">
-      <div class="row">
-        <figure class="col-sm-6">
-          <p>Cars</p>
-          <img src="image/cars.jpg"/>
-        </figure>
-        <figure class="col-sm-6">
-          <p>Electronic</p>
-          <img src="image/electronic.jpg"/>
-        </figure>
+    <div class="row">
+      <div class="column">
+        <h5>CARS</h5>
+        <img src="image/cars.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <h5>ELECTRONIC</h5>
+        <img src="image/electronic.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      
+      <div class="column">
+        <h5>BOOKS</h5>
+        <img src="image/books.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
         
       </div>
-      <div class="row">
-        <figure class="col-sm-6">
-          <p>Furnitures</p>
-          <img src="image/furnitures.jpg"/>
-        </figure>
-        
-        <figure class="col-sm-6">
-          <p>Books</p>
-          <img src="image/books.jpg"/>
-        </figure>
+      <div class="column">
+        <h5>FURNITURES</h5>
+        <img src="image/furnitures.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
       </div>
-    </section>
-    
+    </div>
     <footer class="container">
       <div class="row">
         <p class="col-sm-4">&copy: 2016 CS408: NANXIN JIN, YANG SHI, WEIJIE MENG, JINTAO ZENG, YAOXI LIANG</p>
