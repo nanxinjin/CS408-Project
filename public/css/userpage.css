@@ -1,0 +1,104 @@
+.btn.btn-back {
+  border-radius: 2px;
+  position:fixed;
+  top:3px;
+  left:5px;
+  width: 100px;
+  border: 0px;
+  color: #ffffff;
+  text-shadow: none;
+  background-color: rgba(100, 57, 98, 0.5);
+}
+
+
+
+.btn.btn-secondary {
+  position:fixed;
+  top:3px;
+  right:5px;
+  width: 100px;
+  background-color: rgba(216, 44, 94, 1);
+  color: #ffffff;
+  margin: 0 0 30px;
+}
+
+#btn-setting {
+	position:fixed;
+	width: 35px;
+	height: 35px;
+	top:5px;
+	right:5px;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url("../image/login_WallPaper.jpg");
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.jumbotron h4 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+
