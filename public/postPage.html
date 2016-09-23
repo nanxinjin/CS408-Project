@@ -24,7 +24,7 @@
 		<!--This is navigation bar>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 		<!--Login page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 		<div id="id01" class="modal">
-			
+
 			<form class="modal-content animate" action="action_page.php">
 				<div class="imgcontainer">
 					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -35,7 +35,7 @@
 					<input type="text" placeholder="Enter Username" name="uname" required>
 					<label><b>Password</b></label>
 					<input type="password" placeholder="Enter Password" name="psw" required>
-					
+
 					<button type="submit">Login</button>
 					<input type="checkbox" checked="checked"> Remember me
 				</div>
@@ -75,7 +75,7 @@
 		</div>
 		<div class="row">
 			<div class="column">
-				<img id="myImg" src="image/books.jpg" alt="Books" width="300" height="200"/>
+				<img id="myImg1" src="image/books.jpg" alt="Books" width="300" height="200"/>
 				<!-- The Modal -->
 				<div id="myModal" class="modal">
 					<span class="close">×</span>
@@ -84,7 +84,7 @@
 				</div>
 			</div>
 			<div class="column">
-				<img id="myImg" src="image/cars.jpg" alt="Cars" width="300" height="200"/>
+				<img id="myImg2" src="image/cars.jpg" alt="Cars" width="300" height="200"/>
 				<div id="myModal" class="modal">
 					<span class="close">×</span>
 					<img class="modal-content" id="img01">
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 			<div class="column">
-				<img id="myImg" src="image/electronic.jpg" alt="Electronic" width="300" height="200"/>
+				<img id="myImg3" src="image/electronic.jpg" alt="Electronic" width="300" height="200"/>
 				<div id="myModal" class="modal">
 					<span class="close">×</span>
 					<img class="modal-content" id="img01">
@@ -100,7 +100,7 @@
 				</div>
 			</div>
 			<div class="column">
-				<img id="myImg" src="image/furnitures.jpg" alt="Furnitures" width="300" height="200"/>
+				<img id="myImg4" src="image/furnitures.jpg" alt="Furnitures" width="300" height="200"/>
 				<div id="myModal" class="modal">
 					<span class="close">×</span>
 					<img class="modal-content" id="img01">
@@ -115,10 +115,31 @@
 		// Get the modal
 		var modal = document.getElementById('myModal');
 		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img = document.getElementById('myImg');
+		var img1 = document.getElementById('myImg1');
+		var img2 = document.getElementById('myImg2');
+		var img3 = document.getElementById('myImg3');
+		var img4 = document.getElementById('myImg4');
 		var modalImg = document.getElementById("img01");
 		var captionText = document.getElementById("caption");
-		img.onclick = function(){
+		img1.onclick = function(){
+		modal.style.display = "block";
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+		}
+
+		img2.onclick = function(){
+		modal.style.display = "block";
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+		}
+
+		img3.onclick = function(){
+		modal.style.display = "block";
+		modalImg.src = this.src;
+		captionText.innerHTML = this.alt;
+		}
+
+		img4.onclick = function(){
 		modal.style.display = "block";
 		modalImg.src = this.src;
 		captionText.innerHTML = this.alt;
