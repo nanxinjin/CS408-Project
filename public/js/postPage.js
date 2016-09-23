@@ -1,14 +1,17 @@
-function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
+}
+
+function w3_open() {
+document.getElementById("mySidenav").style.display = "block";
+document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+document.getElementById("mySidenav").style.display = "none";
+document.getElementById("myOverlay").style.display = "none";
 }
