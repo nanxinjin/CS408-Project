@@ -77,6 +77,21 @@ color: #fff;
 
 }
 
+#post {
+  position:fixed;
+  top:3px;
+  right:80px;
+  width: 100px;
+  background-color:rgba(200, 58, 118, 0.7);;
+  color: white;
+  margin: 0 10 30px;
+}
+
+#post:hover {
+  color: #ffffff;
+
+}
+
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
