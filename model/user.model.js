@@ -24,6 +24,7 @@ var UserSchema = new Schema({
     },
     avatarUrl: { type: String },
     password: { type: String },
+    postedMarket: [{ type: Schema.Types.ObjectId, ref: 'Market' }]
 
 });
 
