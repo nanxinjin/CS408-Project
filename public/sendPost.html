@@ -1,0 +1,85 @@
+</!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset = "utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CS408 HOMEPAGE</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/sendPost.css">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<script type='text/javascript' src='js/sendPost.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- Custom styles for this template -->
+	</head>
+	<body>
+		<header class="w3-container w3-padding-4">
+			<!--This is navigation bar-->
+			<ul class="w3-navbar w3-border-bottom">
+				<li><a class="w3-hover-teal " href="homePage.html">HOME</a></li>
+				<li><a class="w3-hover-teal " href="postPage.html">MARKET</a></li>
+				<li><a class="w3-hover-teal " href="#">CONTACT US</a></li>
+				<li><a class="w3-hover-teal " href="forgetPassword.html">test to forgetPassword</a></li>
+				<li><a id="login" class="w3-hover-teal " onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</a></li>
+			</ul>
+		</header>
+		
+		<section class="jumbotron">
+			<div class="container">
+				<div class="row text-center">
+					<h2>CIRCULATION</h2>
+					<h4>Your Revolutionary Businesses</h4>
+				</div>
+			</div>
+		</section>
+		<!--Login-->
+		<div id="id01" class="modal">
+			
+			<form class="modal-content animate" action="action_page.php">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<img src="image/userProfile.png" alt="Avatar" class="avatar">
+				</div>
+				<div class="container">
+					<label><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+					
+					<button type="submit">Login</button>
+					<input type="checkbox" checked="checked"> Remember me
+				</div>
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+					<span class="psw"><a href="forgetPassword.html">Forgot password?</a></span>
+				</div>
+			</form>
+		</div>
+		<!--Login page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+		<!--Input Area-->
+		<form><label>Title</label>
+		<div>
+			<textarea rows="2" cols="50"></textarea>
+		</form></div>
+		<div class="imgcontainer">
+			<img src="image/cars.jpg" class="w3-round-large"  style="width:30%">
+		</div>
+		<form><label>Description</label>
+		<div>
+			<textarea rows="20" cols="150"></textarea>
+		</form></div>
+		<p>
+			<form><label>Price</label>
+			<div>
+				<textarea rows="2" cols="50"></textarea>
+			</form></div>
+			<form><label>Contact</label>
+			<div>
+				<textarea rows="2" cols="50"></textarea>
+			</form></div>
+			<button class="w3-btn-block w3-teal" onclick="location.href='postPage.html';">Post</button>
+		</form>
+		<!--END Input Area-->
+	</body>
+</html>
