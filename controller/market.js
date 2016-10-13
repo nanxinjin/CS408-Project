@@ -19,16 +19,56 @@ module.exports = {
         })
     },
     getAllMarket: function(req, res) {
-        Market.find().exec(function (err, doc) {
+        Market.find().exec(function(err, doc) {
             if (err) return res.status(400).send();
             res.send(doc);
         });
     },
     updateMarket: function(req, res) {
         //TODO
+        //    var itemID = parseInt(req.params.id, 10);
+        console.log(req.params.id);
+        var body = _.pick(req.body, 'title', 'content', 'price');
+
+        var attributes = {};
+        if (body.hasOwnProperty('title')) {
+            attributes.title = body.title;
+        }
+        if (body.hasOwnProperty('content')) {
+            attributes.content = body.content;
+        }
+        if (body.hasOwnProperty('price')) {
+            attributes.price = body.price;
+        }
+
+        Market.findOneAndUpdate({
+            _id: req.params.id
+        }, {
+            $set: attributes
+        }, {
+            new: true
+        }, function(err, doc) {
+            if (err)
+                res.send(err);
+            res.json({
+                message: 'item updated!'
+            });
+        });
+
     },
     deleteMarket: function(req, res) {
-        //TODO
+
+        Market.remove({
+            _id: req.params.id
+        }, function(err) {
+            if (!err) {
+                res.json({
+                    message: 'item deleted successfully!'
+                });
+            } else {
+                res.send(err);
+            }
+        });
     }
 
 

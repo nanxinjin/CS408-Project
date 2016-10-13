@@ -10,11 +10,13 @@ module.exports = function(app) {
     app.post('/api/login', auth.loginWithEmail);
     app.get('/api/getAllUsers', auth.getAllUsers);
     app.delete('/api/deletealluser', auth.deleleAllUser);
-    app.post('/api/logout',middleware.requireAuthentication, auth.logout);
+    app.post('/api/logout', middleware.requireAuthentication, auth.logout);
 
     app.get('/api/token', token.getAllToken)
     app.delete('/api/token', token.deleteAllToken);
 
-    app.post('/api/market',middleware.requireAuthentication, market.postMarket);
+    app.post('/api/market', middleware.requireAuthentication, market.postMarket);
     app.get('/api/market', market.getAllMarket);
+    app.put('/api/market/:id', middleware.requireAuthentication, market.updateMarket);
+    app.delete('/api/market/:id', middleware.requireAuthentication, market.deleteMarket);
 };
