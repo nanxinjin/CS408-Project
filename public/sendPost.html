@@ -8,7 +8,6 @@
 		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/style_sendPost.css">
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-		<script type='text/javascript' src='js/sendPost.js'></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!-- Custom styles for this template -->
@@ -24,7 +23,7 @@
 				<li><a id="login" class="w3-hover-teal " onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</a></li>
 			</ul>
 		</header>
-		
+
 		<section class="jumbotron">
 			<div class="container">
 				<div class="row text-center">
@@ -35,7 +34,7 @@
 		</section>
 		<!--Login-->
 		<div id="id01" class="modal">
-			
+
 			<form class="modal-content animate" action="action_page.php">
 				<div class="imgcontainer">
 					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -46,7 +45,7 @@
 					<input type="text" placeholder="Enter Username" name="uname" required>
 					<label><b>Password</b></label>
 					<input type="password" placeholder="Enter Password" name="psw" required>
-					
+
 					<button type="submit">Login</button>
 					<input type="checkbox" checked="checked"> Remember me
 				</div>
@@ -58,28 +57,32 @@
 		</div>
 		<!--Login page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 		<!--Input Area-->
-		<form><label>Title</label>
+		<form id="postMarket-form">
+			<label>Title</label>
 		<div>
-			<textarea rows="2" cols="50"></textarea>
-		</form></div>
+			<textarea rows="2" cols="50" name="Title"></textarea>
+		</div>
 		<div class="imgcontainer">
 			<img src="image/cars.jpg" class="w3-round-large"  style="width:30%">
 		</div>
-		<form><label>Description</label>
+		<label>Description</label>
 		<div>
-			<textarea rows="20" cols="150"></textarea>
-		</form></div>
-		<p>
-			<form><label>Price</label>
+			<textarea rows="20" cols="150" name="Description"></textarea>
+		</div>
+			<label>Price</label>
 			<div>
-				<textarea rows="2" cols="50"></textarea>
-			</form></div>
-			<form><label>Contact</label>
+				<textarea rows="2" cols="50" name="Price"></textarea>
+			</div>
+			<label>Contact</label>
 			<div>
-				<textarea rows="2" cols="50"></textarea>
-			</form></div>
-			<button class="w3-btn-block w3-teal" onclick="location.href='postPage.html';">Post</button>
+				<textarea rows="2" cols="50" name="Contact"></textarea>
+			</div>
+			<button class="w3-btn-block w3-teal" id="postMarket_button">Post</button>
 		</form>
 		<!--END Input Area-->
+		<script src="./js/jquery-2.2.4.min.js"></script>
+	    <script src="./js/moment-2.13.0.js"></script>
+	    <script src="./js/QueryParams.js"></script>
+	    <script type='text/javascript' src='./js/sendPost.js'></script>
 	</body>
 </html>

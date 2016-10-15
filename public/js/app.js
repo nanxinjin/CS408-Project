@@ -13,7 +13,8 @@ $form.on('submit', function(event) {
 // password: tao
 
     $.ajax({
-        url: "https://cs408.herokuapp.com/api/login",
+		// url: "https://cs408.herokuapp.com/api/login",
+		url: "http://localhost:3001/api/login",
         data: {
             email: $email.val(),
             password: $password.val()

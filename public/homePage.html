@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style_main.css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-    <script type='text/javascript' src='js/homePage.js'></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom styles for this template -->
@@ -28,19 +28,19 @@
     <!--This is navigation bar>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
     <!--Login page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
     <div id="id01" class="modal">
-      
-      <form class="modal-content animate" action="action_page.php">
+
+      <form class="modal-content animate" id="login-form">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <img src="image/userProfile.png" alt="Avatar" class="avatar">
         </div>
         <div class="container">
-          <label><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
           <label><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          
-          <button type="submit">Login</button>
+          <input type="password" placeholder="Enter Password" name="password" required>
+
+          <button type="submit" id="login_button">Login</button>
           <input type="checkbox" checked="checked"> Remember me
         </div>
         <div class="container" style="background-color:#f1f1f1">
@@ -82,11 +82,11 @@
         <h5>ELECTRONIC</h5>
         <img src="image/electronic.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
       </div>
-      
+
       <div class="column">
         <h5>BOOKS</h5>
         <img src="image/books.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        
+
       </div>
       <div class="column">
         <h5>FURNITURES</h5>
@@ -100,21 +100,26 @@
           <li class="col-sm-1">
             <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
           </li>
-          
+
           <li class="col-sm-1">
             <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
           </li>
-          
+
           <li class="col-sm-1">
             <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
           </li>
-          
+
           <li class="col-sm-1">
             <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
           </li>
         </ul>
       </div>
     </footer>
-    
+
+
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/moment-2.13.0.js"></script>
+    <script src="./js/QueryParams.js"></script>
+    <script type='text/javascript' src='./js/homePage.js'></script>
   </body>
 </html>
