@@ -57,28 +57,27 @@
 		</div>
 		<!--Login page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 		<!--Input Area-->
-		<form>
+		<form id="postMarket-form">
 			<label>Title</label>
 		<div>
-			<textarea rows="2" cols="50"></textarea>
-		</form></div>
+			<textarea rows="2" cols="50" name="Title"></textarea>
+		</div>
 		<div class="imgcontainer">
 			<img src="image/cars.jpg" class="w3-round-large"  style="width:30%">
 		</div>
-		<form><label>Description</label>
+		<label>Description</label>
 		<div>
-			<textarea rows="20" cols="150"></textarea>
-		</form></div>
-		<p>
-			<form><label>Price</label>
+			<textarea rows="20" cols="150" name="Description"></textarea>
+		</div>
+			<label>Price</label>
 			<div>
-				<textarea rows="2" cols="50"></textarea>
-			</form></div>
-			<form><label>Contact</label>
+				<textarea rows="2" cols="50" name="Price"></textarea>
+			</div>
+			<label>Contact</label>
 			<div>
-				<textarea rows="2" cols="50"></textarea>
-			</form></div>
-			<button class="w3-btn-block w3-teal" onclick="location.href='postPage.html';">Post</button>
+				<textarea rows="2" cols="50" name="Contact"></textarea>
+			</div>
+			<button class="w3-btn-block w3-teal" id="postMarket_button">Post</button>
 		</form>
 		<!--END Input Area-->
 		<script src="./js/jquery-2.2.4.min.js"></script>
