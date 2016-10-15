@@ -25,7 +25,6 @@ module.exports = {
         });
     },
     updateMarket: function(req, res) {
-        //TODO
         //    var itemID = parseInt(req.params.id, 10);
         console.log(req.params.id);
         var body = _.pick(req.body, 'title', 'content', 'price');
