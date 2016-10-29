@@ -12,11 +12,12 @@ mongoose.connect(MONGO_URI, function(err) {
     console.log('Successfully connected to MongoDB');
 });
 
+app.use(express.static(__dirname + '/public/homePage.html'));
+
 app.use(cors);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/public'));
 
 
 require('./app/router')(app);

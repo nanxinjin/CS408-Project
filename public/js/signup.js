@@ -1,20 +1,5 @@
 //This is for user login
-var modal = document.getElementById('id01');
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
-//This is for full screen Information
-function openNav() {
-    document.getElementById("myNav").style.height = "100%";
-}
-
-function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-}
 
 var $form = $('#login-form');
 
@@ -31,8 +16,8 @@ $form.on('submit', function(event) {
 // password: tao
 
     $.ajax({
-        url: "https://cs408.herokuapp.com/api/login",
-        // url: "http://localhost:3001/api/login",
+        url: "https://cs408.herokuapp.com/api/signup",
+        // url: "http://localhost:3001/api/signup",
         data: {
             email: $email.val(),
             password: $password.val()
@@ -52,7 +37,7 @@ $form.on('submit', function(event) {
       // status codes are passed to the function
       .fail(function( xhr, status, errorThrown ) {
           //TODO: deal with the success situation
-        alert( "Log in fail!" );
+        alert( "Sign up fail!" );
         console.log( "Error: " + errorThrown );
         console.log( "Status: " + status );
         // console.dir( xhr );

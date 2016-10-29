@@ -17,7 +17,9 @@ module.exports = {
 
             t.save(function(err, doc) {
                 if (err) return res.status(400).json(err);
-                res.header('Auth', doc.get('token')).json(user.toPublicJSON());
+                var resUser = user.toPublicJSON();
+                resUser.Auth = doc.get('token')
+                res.status(200).send(resUser);
             });
             // res.sendStatus(200);
         });
@@ -35,8 +37,14 @@ module.exports = {
             return t.save();
 
     	}).then(function(tokenInstance) {
-            res.header('Auth', tokenInstance.get('token')).json(userInstance.toPublicJSON());
+            console.log('get resUser: ' + userInstance.toPublicJSON());
+            var resUser = userInstance.toPublicJSON();
+            console.log('get resUser: ' + resUser);
+            resUser.Auth = tokenInstance.get('token')
+            console.log('get resUser2: ' + resUser);
+            res.status(200).send(resUser);
     	}).catch(function(e) {
+            console.log('error: ' + e);
     		res.status(401).json(e);
     	});
     },
