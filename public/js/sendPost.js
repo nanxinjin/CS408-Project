@@ -38,7 +38,7 @@ $form.on('submit', function(event) {
       // The response is passed to the function
       .done(function( data, textStatus, request ) {
           //TODO: deal with the success situation, store the token to localstorage
-          
+
         //   window.location.href = "userpage.html";
       })
 
@@ -46,7 +46,7 @@ $form.on('submit', function(event) {
       // status codes are passed to the function
       .fail(function( xhr, status, errorThrown ) {
           //TODO: deal with the success situation
-        alert( "Post message fail!" );
+        
         console.log( "Error: " + errorThrown );
         console.log( "Status: " + status );
         // console.dir( xhr );
