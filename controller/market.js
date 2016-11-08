@@ -14,7 +14,7 @@ module.exports = {
             req.user.postedMarket.push(item);
             req.user.save(function(err, doc) {
                 if (err) return res.status(500).send();
-                res.status(204).send();
+                res.status(200).send();
             });
         })
     },
@@ -27,7 +27,7 @@ module.exports = {
     updateMarket: function(req, res) {
         //    var itemID = parseInt(req.params.id, 10);
         console.log(req.params.id);
-        var body = _.pick(req.body, 'title', 'content', 'price');
+        var body = _.pick(req.body, 'title', 'content');
 
         var attributes = {};
         if (body.hasOwnProperty('title')) {
@@ -36,9 +36,11 @@ module.exports = {
         if (body.hasOwnProperty('content')) {
             attributes.content = body.content;
         }
+        /*
         if (body.hasOwnProperty('price')) {
             attributes.price = body.price;
         }
+        */
 
         Market.findOneAndUpdate({
             _id: req.params.id
@@ -60,13 +62,17 @@ module.exports = {
         Market.remove({
             _id: req.params.id
         }, function(err) {
+            res.send(err);
+            /*
             if (!err) {
+
                 res.json({
                     message: 'item deleted successfully!'
                 });
             } else {
                 res.send(err);
             }
+            */
         });
     }
 
