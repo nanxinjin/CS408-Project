@@ -16,8 +16,9 @@ var UserSchema = new Schema({
         lowercase: true,
         required: true,
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
-        index: { unique: true }
+        index: { unique: false }
     },
+    
     displayName: {
         type: String,
         maxlength: [24, 'displayName too long']
