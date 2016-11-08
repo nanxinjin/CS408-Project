@@ -62,17 +62,15 @@ module.exports = {
         Market.remove({
             _id: req.params.id
         }, function(err) {
-            res.send(err);
-            /*
-            if (!err) {
+            //res.send(err);
 
-                res.json({
-                    message: 'item deleted successfully!'
-                });
+            if (!err) {
+                res.status(404).send();
+
             } else {
                 res.send(err);
             }
-            */
+
         });
     }
 
