@@ -8,7 +8,7 @@ module.exports = {
     postMarket: function(req, res) {
         var body = _.pick(req.body, 'title', 'content', 'contact', 'price');
         body.createdAt = moment().valueOf();
-        body.user = req.user._id;
+        body.sender = req.user._id;
         var newMarket = new Market(body);
         newMarket.save(function(err, item) {
             if (err) return res.status(500).send();
