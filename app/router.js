@@ -1,10 +1,14 @@
-var Token = require('../model/token.model');
+var index = require('../controller/index');
 var auth = require('../controller/auth');
+var Token = require('../model/token.model');
 var market = require('../controller/market');
 var token = require('../controller/token');
 var middleware = require('../middleware')();
 
 module.exports = function(app) {
+
+    app.get('/homePage',index.homePage);
+
 
     app.post('/api/signup', auth.registerWithEmail);
     app.post('/api/login', auth.loginWithEmail);

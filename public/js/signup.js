@@ -26,7 +26,7 @@ $form.on('submit', function(event) {
           //TODO: deal with the success situation, store the token to localstorage
           console.log('data: '+ data.Auth);
           localStorage.setItem("auth", data.Auth);
-          window.location.href = "userpage.html";
+          window.location.href = "index.html";
       })
 
       // Code to run if the request fails; the raw request and
