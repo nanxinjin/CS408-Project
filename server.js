@@ -15,7 +15,7 @@ mongoose.connect(MONGO_URI, function(err) {
 
 // app.use(express.static(__dirname + '/public/homePage.html'));
 
-app.use(cors);
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
