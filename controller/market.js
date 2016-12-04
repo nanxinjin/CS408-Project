@@ -8,6 +8,7 @@ module.exports = {
     postMarket: function(req, res) {
         var body = _.pick(req.body, 'title', 'content', 'contact', 'price');
         body.createdAt = moment().valueOf();
+        body.user = req.user._id;
         var newMarket = new Market(body);
         newMarket.save(function(err, item) {
             if (err) return res.status(500).send();
@@ -17,6 +18,12 @@ module.exports = {
                 res.status(204).send();
             });
         })
+    },
+    getUserMarket: function(req, res) {
+        Market.find({user: req.user._id}).sort({createdAt: -1}).exec(function(err, doc) {
+            if (err) return res.status(400).send();
+            res.send(doc);
+        });
     },
     getAllMarket: function(req, res) {
         Market.find().sort({createdAt: -1}).exec(function(err, doc) {

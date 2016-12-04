@@ -16,6 +16,16 @@ if (localStorage.getItem('email')) {
     window.location.href = "index.html";
 }
 
+$(document).ready(function(){
+    $("#login").click(function(){
+        if (localStorage.getItem('email')) {
+            window.location.href = "userpage.html";
+        } else {
+            $('#id01').css({display: 'block'});
+        }
+    });
+});
+
 var $form = $('#postMarket-form');
 
 $form.on('submit', function(event) {
@@ -37,7 +47,7 @@ $form.on('submit', function(event) {
         },
         data: {
             title: $Title.val(),
-            description: $Description.val(),
+            content: $Description.val(),
             price: $Price.val(),
             contact: $Contact.val(),
 
@@ -45,7 +55,7 @@ $form.on('submit', function(event) {
         type: "POST"
     }).done(function( data, textStatus, request ) {
           //TODO: deal with the success situation, store the token to localstorage
-
+          window.location.href = "postPage.html";
         //   window.location.href = "userpage.html";
     }).fail(function( xhr, status, errorThrown ) {
           //TODO: deal with the success situation

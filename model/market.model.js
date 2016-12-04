@@ -6,6 +6,7 @@ var MarketSchema = new Schema({
     content: { type: String },
     price: { type: Number },
     contact: { type: String },
+    sender: { type: Schema.Types.ObjectId, ref: 'User' },
     createdAt: { type: Number }
 });
 
