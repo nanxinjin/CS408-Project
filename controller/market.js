@@ -6,7 +6,7 @@ var Market = require('../model/market.model');
 
 module.exports = {
     postMarket: function(req, res) {
-        var body = _.pick(req.body, 'title', 'content', 'price');
+        var body = _.pick(req.body, 'title', 'content', 'contact', 'price');
         body.createdAt = moment().valueOf();
         var newMarket = new Market(body);
         newMarket.save(function(err, item) {
@@ -19,7 +19,7 @@ module.exports = {
         })
     },
     getAllMarket: function(req, res) {
-        Market.find().exec(function(err, doc) {
+        Market.find().sort({createdAt: 1}).exec(function(err, doc) {
             if (err) return res.status(400).send();
             res.send(doc);
         });

@@ -1,9 +1,19 @@
 var modal = document.getElementById('id01');
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+// window.onclick = function(event) {
+//     if (localStorage.getItem('email')) {
+//         window.location.href = "userpage.html";
+//     } else {
+//         if (event.target == modal) {
+//             modal.style.display = "none";
+//         }
+//     }
+// }
+
+if (localStorage.getItem('email')) {
+    $('#login').text(localStorage.getItem('email'));
+} else {
+    window.location.href = "index.html";
 }
 
 var $form = $('#postMarket-form');
@@ -38,7 +48,7 @@ $form.on('submit', function(event) {
       // The response is passed to the function
       .done(function( data, textStatus, request ) {
           //TODO: deal with the success situation, store the token to localstorage
-          
+
         //   window.location.href = "userpage.html";
       })
 

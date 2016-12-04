@@ -5,4 +5,11 @@ $(document).ready(function(){
 	$('div').mouseleave(function(){
 		$('div').fadeTo('fast',1);
 	});
-});s
+});
+
+var $email = $('#user-email');
+if (localStorage.getItem("email")) {
+	$email.text(localStorage.getItem("email"));
+} else {
+	$email.text("Please log in");
+}

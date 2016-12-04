@@ -8,43 +8,42 @@
 		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 		<link rel="stylesheet" type="text/css" href="css/style_postPage.css">
-		<script type='text/javascript' src='js/postPage.js'></script>
 	</head>
 	<body>
 		<div class="w3-container w3-padding-4">
 			<!--This is navigation bar>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 			<ul class="w3-navbar w3-border-bottom">
-				<li><a class="w3-hover-teal " href="homePage.html">HOME</a></li>
+				<li><a class="w3-hover-teal " href="index.html">HOME</a></li>
 				<li><a class="w3-hover-teal " href="#">MARKET</a></li>
 				<li><a class="w3-hover-teal " href="#">CONTACT US</a></li>
-				<li><a class="w3-hover-teal " href="forgetPassword.html">test to forgetPassword</a></li>
-				<li><a id="post" class="w3-hover-teal " href="sendPost.html" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">MAKE YOUR POST</a></li>
-				<li><a id="login" class="w3-hover-teal " onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</a></li>
+				<!-- <li><a class="w3-hover-teal " href="forgetPassword.html">test to forgetPassword</a></li> -->
+				<li><a id="post" class="w3-hover-teal " href="sendPost.html" style="width:auto;">MAKE YOUR POST</a></li>
+				<li><a id="login" class="w3-hover-teal " style="width:auto;">LOGIN</a></li>
 			</ul>
 		</div>
 		<!--This is navigation bar>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 		<!--Login page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 		<div id="id01" class="modal">
 
-			<form class="modal-content animate" action="action_page.php">
-				<div class="imgcontainer">
-					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-					<img src="image/userProfile.png" alt="Avatar" class="avatar">
-				</div>
-				<div class="container">
-					<label><b>Username</b></label>
-					<input type="text" placeholder="Enter Username" name="uname" required>
-					<label><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" name="psw" required>
+			<form class="modal-content animate" id="login-form">
+	          <div class="imgcontainer">
+	            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	            <img src="image/userProfile.png" alt="Avatar" class="avatar">
+	          </div>
+	          <div class="container">
+	            <label><b>Email</b></label>
+	            <input type="text" placeholder="Enter Email" name="email" required>
+	            <label><b>Password</b></label>
+	            <input type="password" placeholder="Enter Password" name="password" required>
 
-					<button type="submit">Login</button>
-					<input type="checkbox" checked="checked"> Remember me
-				</div>
-				<div class="container" style="background-color:#f1f1f1">
-					<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-					<span class="psw">Forgot <a href="forgetPassword.html">password?</a></span>
-				</div>
-			</form>
+	            <button type="submit" id="login_button">Login</button>
+	            <input type="checkbox" checked="checked"> Remember me
+	          </div>
+	          <div class="container" style="background-color:#f1f1f1">
+	            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	            <span class="psw"><a href="forgetPassword.html">Forgot password?</a></span>
+	          </div>
+	        </form>
 		</div>
 		<!--Login page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
 		<!--This is cover-->
@@ -74,77 +73,54 @@
 		<div class="w3-container">
 			<div></div>
 		</div>
-		<div class="row">
-			<div class="column">
-				<img id="myImg1" src="image/books.jpg" alt="Books" width="300" height="200"/>
-				<!-- The Modal -->
-				<div id="myModal" class="modal">
-					<span class="close">×</span>
-					<img class="modal-content" id="img01">
-					<div id="caption"></div>
-				</div>
-			</div>
-			<div class="column">
-				<img id="myImg2" src="image/cars.jpg" alt="Cars" width="300" height="200"/>
-				<div id="myModal" class="modal">
-					<span class="close">×</span>
-					<img class="modal-content" id="img01">
-					<div id="caption"></div>
-				</div>
-			</div>
-			<div class="column">
-				<img id="myImg3" src="image/electronic.jpg" alt="Electronic" width="300" height="200"/>
-				<div id="myModal" class="modal">
-					<span class="close">×</span>
-					<img class="modal-content" id="img01">
-					<div id="caption"></div>
-				</div>
-			</div>
-			<div class="column">
-				<img id="myImg4" src="image/furnitures.jpg" alt="Furnitures" width="300" height="200"/>
-				<div id="myModal" class="modal">
-					<span class="close">×</span>
-					<img class="modal-content" id="img01">
-					<div id="caption"></div>
-				</div>
-			</div>
+		<div id="post-list" class="row"></div>
+
+		<div id="myModal" class="modal">
+			<span class="close">×</span>
+			<img class="modal-content" id="img-large">
+			<div id="caption"></div>
 		</div>
+
 		<footer class="w3-container">
 			<h5>This is Footer</h5>
 		</footer>
+
+		<script src="./js/jquery-2.2.4.min.js"></script>
+		<script type='text/javascript' src='js/postPage.js'></script>
+
 		<script>
 		// Get the modal
-		var modal = document.getElementById('myModal');
+		// var modal = document.getElementById('myModal');
 		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img1 = document.getElementById('myImg1');
-		var img2 = document.getElementById('myImg2');
-		var img3 = document.getElementById('myImg3');
-		var img4 = document.getElementById('myImg4');
-		var modalImg = document.getElementById("img01");
-		var captionText = document.getElementById("caption");
-		img1.onclick = function(){
-		modal.style.display = "block";
-		modalImg.src = this.src;
-		captionText.innerHTML = this.alt;
-		}
-
-		img2.onclick = function(){
-		modal.style.display = "block";
-		modalImg.src = this.src;
-		captionText.innerHTML = this.alt;
-		}
-
-		img3.onclick = function(){
-		modal.style.display = "block";
-		modalImg.src = this.src;
-		captionText.innerHTML = this.alt;
-		}
-
-		img4.onclick = function(){
-		modal.style.display = "block";
-		modalImg.src = this.src;
-		captionText.innerHTML = this.alt;
-		}
+		// var img1 = document.getElementById('myImg1');
+		// var img2 = document.getElementById('myImg2');
+		// var img3 = document.getElementById('myImg3');
+		// var img4 = document.getElementById('myImg4');
+		// var modalImg = document.getElementById("img01");
+		// var captionText = document.getElementById("caption");
+		// img1.onclick = function(){
+		// modal.style.display = "block";
+		// modalImg.src = this.src;
+		// captionText.innerHTML = this.alt;
+		// }
+		//
+		// img2.onclick = function(){
+		// modal.style.display = "block";
+		// modalImg.src = this.src;
+		// captionText.innerHTML = this.alt;
+		// }
+		//
+		// img3.onclick = function(){
+		// modal.style.display = "block";
+		// modalImg.src = this.src;
+		// captionText.innerHTML = this.alt;
+		// }
+		//
+		// img4.onclick = function(){
+		// modal.style.display = "block";
+		// modalImg.src = this.src;
+		// captionText.innerHTML = this.alt;
+		// }
 		// Get the <span> element that closes the modal
 			var span = document.getElementsByClassName("close")[0];
 			// When the user clicks on <span> (x), close the modal
