@@ -1,7 +1,8 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-var cors = require('./services/cors');
+// var cors = require('./services/cors');
+var cors = require('cors');
 
 var app = express();
 var PORT = process.env.PORT || 3001;
@@ -14,7 +15,7 @@ mongoose.connect(MONGO_URI, function(err) {
 
 // app.use(express.static(__dirname + '/public/homePage.html'));
 
-app.use(cors);
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

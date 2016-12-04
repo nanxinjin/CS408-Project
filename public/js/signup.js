@@ -1,7 +1,7 @@
 //This is for user login
 
 
-var $form = $('#login-form');
+var $form = $('#signup-form');
 
 $form.on('submit', function(event) {
 	event.preventDefault();
@@ -10,10 +10,6 @@ $form.on('submit', function(event) {
     var $password = $form.find('input[name=password]');
 
     console.log('clicked email: ' + $email.val() + ' password: ' + $password.val());
-
-//existing account:
-// email: 111@tao.com
-// password: tao
 
     $.ajax({
         url: "https://cs408.herokuapp.com/api/signup",

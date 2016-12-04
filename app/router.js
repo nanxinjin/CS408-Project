@@ -21,6 +21,8 @@ module.exports = function(app) {
 
     app.post('/api/market', middleware.requireAuthentication, market.postMarket);
     app.get('/api/market', market.getAllMarket);
+    
+    app.get('/api/usermarket', middleware.requireAuthentication, market.getUserMarket);
     app.put('/api/market/:id', middleware.requireAuthentication, market.updateMarket);
     app.delete('/api/market/:id', middleware.requireAuthentication, market.deleteMarket);
 };
