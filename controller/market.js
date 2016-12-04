@@ -19,7 +19,7 @@ module.exports = {
         })
     },
     getAllMarket: function(req, res) {
-        Market.find().sort({createdAt: 1}).exec(function(err, doc) {
+        Market.find().sort({createdAt: -1}).exec(function(err, doc) {
             if (err) return res.status(400).send();
             res.send(doc);
         });
