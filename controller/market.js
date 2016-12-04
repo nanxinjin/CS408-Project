@@ -20,7 +20,7 @@ module.exports = {
         })
     },
     getUserMarket: function(req, res) {
-        Market.find({user: req.user._id}).sort({createdAt: -1}).exec(function(err, doc) {
+        Market.find({sender: req.user._id}).sort({createdAt: -1}).exec(function(err, doc) {
             if (err) return res.status(400).send();
             res.send(doc);
         });

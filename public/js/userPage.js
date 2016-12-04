@@ -16,6 +16,9 @@ if (localStorage.getItem("email")) {
 
 $.ajax({
     url: "https://cs408.herokuapp.com/api/usermarket",
+	headers: {
+		"Auth":localStorage.auth
+	},
     type: "GET",
     dataType : "json"
 }).done(function( data, textStatus, request ) {
